@@ -36,14 +36,6 @@ class YearNormalize(object):
             compile(r'^(\d{4})-\d{2}-\d{2}$'), #2008-01-01
         ]
 
-    def _normalize(self, aString, yearRe):
-        try:
-            match = yearRe.match(aString)
-            if match and self._yearBottom <= int(match.group(1)) <= self._yearTop:
-                return match.group(1)
-        except TypeError:
-            return None
-
     def normalize(self, aString):
         for yearRe in self._yearRes:
             result = self._normalize(aString, yearRe)
@@ -53,3 +45,15 @@ class YearNormalize(object):
 
     def unparsable(self, aString):
         return self.normalize(aString) == None and aString or None
+
+    def addRegex(self, aRegexString):
+        self._yearRes.append(compile(aRegexString))
+
+    def _normalize(self, aString, yearRe):
+        try:
+            match = yearRe.match(aString)
+            if match and self._yearBottom <= int(match.group(1)) <= self._yearTop:
+                return match.group(1)
+        except TypeError:
+            return None
+

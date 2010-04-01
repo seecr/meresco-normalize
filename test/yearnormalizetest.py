@@ -65,3 +65,10 @@ class YearNormalizeTest(NormalizeTestCase):
     def testYearLessThanThousand(self):
         self.normalize = YearNormalize(yearRange=(0,2100))
         self.assertNormalize('0008', '0008')
+
+    def testAddRegex(self):
+        self.assertUnparsable('[2008]')
+        aRegexString = r'^\[(\d{4})\]$'
+        self.normalize.addRegex(aRegexString)
+
+        self.assertNormalize('2008', '[2008]')
