@@ -29,7 +29,7 @@ from StringIO import StringIO
 
 from unittest import TestCase
 
-from meresconormalize.name.namenormalize import lastnameAndInitials, lastnameAndFirstInitial, lastname, unparsable, firstLetter, _breakUp, _helsing_v, _helsing_a_v, _helsing_ab_van
+from meresco.normalize.name.namenormalize import lastnameAndInitials, lastnameAndFirstInitial, lastname, unparsable, firstLetter, _breakUp, _helsing_v, _helsing_a_v, _helsing_ab_van
 
 class NameNormalizeTest(TestCase):
 

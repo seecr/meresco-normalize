@@ -21,24 +21,17 @@
 #    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 ## end license ##
-from distutils.core import setup
+set -e
 
-setup(
-    name='meresco-normalize',
-    packages=[
-        'meresco.normalize.name',
-        'meresco.normalize.date',
-        'meresco.normalize.language',
-    ],
-    package_data={
-        'meresconormalize.language': ['*.txt'],
-    },
-    version='%VERSION%',
-    url='http://www.meresco.org',
-    author='Seek You Too',
-    author_email='info@cq2.nl',
-    description='Meresco Normalize is an open-source library containing normalization components for use with Meresco',
-    long_description='Meresco Normalize is an open-source library containing normalization components for use with Meresco',
-    license='GNU Public License',
-    platforms='all',
+rm -rf tmp build
+
+python setup.py install --root tmp
+
+export PYTHONPATH=`pwd`/tmp/usr/lib/python2.5/site-packages
+
+(
+cd test
+./alltests.sh
 )
+
+rm -rf tmp build

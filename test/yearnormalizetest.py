@@ -26,7 +26,7 @@
 ## end license ##
 from unittest import TestCase
 
-from meresconormalize.date import YearNormalize
+from meresco.normalize.date import YearNormalize
 from normalizetestcase import NormalizeTestCase
 
 class YearNormalizeTest(NormalizeTestCase):

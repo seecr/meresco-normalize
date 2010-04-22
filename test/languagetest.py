@@ -27,7 +27,7 @@
 from cq2utils import CQ2TestCase
 from os.path import join
 
-from meresconormalize.language import Language
+from meresco.normalize.language import Language
 
 TESTDATA="""dut\tnl\tNederlands\tDutch
 eng\ten\tEngels\tEnglish

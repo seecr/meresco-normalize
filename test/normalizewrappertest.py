@@ -25,7 +25,7 @@
 #
 ## end license ##
 from unittest import TestCase
-from meresconormalize.name import FirstInitialNormalize, LastnameNormalize
+from meresco.normalize.name import FirstInitialNormalize, LastnameNormalize
 from normalizetestcase import NormalizeTestCase
 
 class NormalizeWrapperTest(NormalizeTestCase):
