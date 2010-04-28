@@ -31,7 +31,7 @@ setup(
         'meresco.normalize.language',
     ],
     package_data={
-        'meresconormalize.language': ['*.txt'],
+        'meresco.normalize.language': ['*.txt'],
     },
     version='%VERSION%',
     url='http://www.meresco.org',
