@@ -1,2 +1,2 @@
 python-cq2utils
-meresco-core-3.0-beta (>= 6)
+meresco-core3.0
