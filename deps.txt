@@ -1,2 +1,1 @@
 python-cq2utils
-meresco-core3.0
