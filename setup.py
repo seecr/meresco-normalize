@@ -26,6 +26,7 @@ from distutils.core import setup
 setup(
     name='meresco-normalize',
     packages=[
+        'meresco.normalize',
         'meresco.normalize.name',
         'meresco.normalize.date',
         'meresco.normalize.language',
