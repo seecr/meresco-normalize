@@ -24,7 +24,7 @@
 #
 ## end license ##
 
-from cq2utils import CQ2TestCase
+from seecr.test import SeecrTestCase
 from os.path import join
 
 from meresco.normalize.language import Language
@@ -34,9 +34,9 @@ eng\ten\tEngels\tEnglish
 ger\tde\tDuits\tGerman
 """
 
-class LanguageTest(CQ2TestCase):
+class LanguageTest(SeecrTestCase):
     def setUp(self):
-        CQ2TestCase.setUp(self)
+        SeecrTestCase.setUp(self)
         filename = join(self.tempdir, 'languages.txt')
         fp = open(filename, 'w').write(TESTDATA)
         self.language = Language(filename)
