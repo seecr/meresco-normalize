@@ -1,0 +1,371 @@
+|aa||aar||aar||Afar (taal)|[[Afar]], Hamitisch||lang=&quot;aa&quot;|Afaraf||
+|----
+|ab||abk||abk||[[Abchazisch]]||lang=&quot;ab&quot;|Аҧсуа||
+|----
+|ae||ave||ave||[[Avestisch]]||lang=&quot;ae&quot;|Avesta||
+|----
+|af||afr||afr||[[Afrikaans]]||lang=&quot;af&quot;|Afrikaans||
+|----
+|ak||aka||aka + [[ISO 639:aka|2]]||[[Akan (taal)|Akan]]||lang=&quot;ak&quot;|Akan||
+|----
+|am||amh||amh||[[Amhaars]], Amharisch||lang=&quot;am&quot;|አማርኛ||
+|----
+|an||arg||arg||[[Aragonees]]||lang=&quot;an&quot;|Aragonés||
+|----
+|ar||ara||ara + [[ISO 639:ara|30]]||[[Arabisch]]||lang=&quot;ar&quot; dir=&quot;rtl&quot;|‫العربية||
+|----
+|as||asm||asm||[[Assamees]], Assami||lang=&quot;as&quot;|অসমীয়া||
+|----
+|av||ava||ava||[[Avaars]]||lang=&quot;av&quot;|авар мацӀ, магӀарул мацӀ||
+|----
+|ay||aym||aym + [[ISO 639:aym|2]]||[[Aymara (taal)|Aymara]], Aymará||lang=&quot;ay&quot;|aymar aru||
+|----
+|az||aze||aze + [[ISO 639:aze|2]]||[[Azeri (taal)|Azeri]], Azerbeidzjaans||lang=&quot;az&quot;|azərbaycan dili||
+|----
+|ba||bak||bak||[[Basjkiers]], Basjkirisch||lang=&quot;ba&quot;|башҡорт теле||
+|----
+|be||bel||bel||[[Wit-Russisch]], Belarussisch||lang=&quot;be&quot;|Беларуская||
+|----
+|bg||bul||bul||[[Bulgaars]]||lang=&quot;bg&quot;|български език||
+|----
+|bh||bih||-----||[[Bihari]]||lang=&quot;bh&quot;|भोजपुरी||
+|----
+|bi||bis||bis||[[Bislama]]||lang=&quot;bi&quot;|Bislama||
+|----
+|bm||bam||bam||[[Bambara_(taal)|Bambara]]||lang=&quot;bm&quot;|bamanankan||
+|----
+|bn||ben||ben||[[Bengaals]]||lang=&quot;bn&quot;|বাংলা||
+|----
+|bo||tib/bod||bod||[[Tibetaans]]||lang=&quot;bo&quot;|བོད་ཡིག||
+|----
+|br||bre||bre||[[Bretons]]||lang=&quot;br&quot;|brezhoneg||
+|----
+|bs||bos||bos||[[Bosnisch]]||lang=&quot;bs&quot;|bosanski jezik||
+|----
+|ca||cat||cat||[[Catalaans (taal)|Catalaans]]||lang=&quot;ca&quot;|Català||
+|----
+|ce||che||che||[[Tsjetsjeens]]||lang=&quot;ce&quot;|нохчийн мотт||
+|----
+|ch||cha||cha||[[Chamorro]]||lang=&quot;ch&quot;|Chamoru||
+|----
+|co||cos||cos||[[Corsicaans]]||lang=&quot;co&quot;|corsu, lingua corsa||
+|----
+|cr||cre||cre + [[ISO 639:cre|6]]||[[Cree_(taal)|Cree]]||lang=&quot;cr&quot;|ᓀᐦᐃᔭᐍᐏᐣ||
+|----
+|cs||cze/ces||ces||[[Tsjechisch]]||lang=&quot;cs&quot;|česky, čeština||
+|----
+|cu||chu||chu||[[Kerkslavisch]]||lang=&quot;cu&quot;|ѩзыкъ словѣньскъ||
+|----
+|cv||chv||chv||[[Tsjoevasjisch]]||lang=&quot;cv&quot;|чӑваш чӗлхи||
+|----
+|cy||wel/cym||cym||[[Welsh (taal)|Welsh]]||lang=&quot;cy&quot;|Cymraeg||
+|----
+|da||dan||dan||[[Deens]]||lang=&quot;da&quot;|dansk||
+|----
+|de||ger/deu||deu||[[Duits]]||lang=&quot;de&quot;|Deutsch||
+|----
+|dv||div||div||[[Divehi]]||lang=&quot;dv&quot; dir=&quot;rtl&quot;|‫ދިވެހި||
+|----
+|dz||dzo||dzo||[[Dzongkha]]||lang=&quot;dz&quot;|རྫོང་ཁ||
+|----
+|ee||ewe||ewe||[[Ewe]]||lang=&quot;ee&quot;|Ɛʋɛgbɛ||
+|----
+|el||gre/ell||ell||[[Grieks]]||lang=&quot;el&quot;|Ελληνικά||
+|----
+|en||eng||eng||[[Engels]]||lang=&quot;en&quot;|English||
+|----
+|eo||epo||epo||[[Esperanto]]||lang=&quot;eo&quot;|Esperanto||
+|----
+|es||spa||spa||[[Spaans]]||lang=&quot;es&quot;|español, castellano||
+|----
+|et||est||est||[[Estisch]], Ests||lang=&quot;et&quot;|Eesti keel||
+|----
+|eu||baq/eus||eus||[[Baskisch]]||lang=&quot;eu&quot;|euskara||
+|----
+|fa||per/fas||fas + [[ISO 639:fas|2]]||[[Perzisch]], Farsi||lang=&quot;fa&quot; dir=&quot;rtl&quot;|‫فارسی||
+|----
+|ff||ful||ful + [[ISO 639:ful|9]]||[[Fula_(taal)|Fula]]||lang=&quot;ff&quot;|Fulfulde||
+|----
+|fi||fin||fin||[[Fins]]||lang=&quot;fi&quot;|suomen kieli||
+|----
+|fj||fij||fij||[[Fijisch]]||lang=&quot;fj&quot;|vosa Vakaviti||
+|----
+|fo||fao||fao||[[Faeröers]]||lang=&quot;fo&quot;|Føroyskt||
+|----
+|fr||fre/fra||fra||[[Frans]]||lang=&quot;fr&quot;|français, langue française||
+|----
+|fy||fry||fry + [[ISO 639:fry|3]]||[[Fries (taal)|Fries]]||lang=&quot;fy&quot;|Frysk||
+|----
+|ga||gle||gle||[[Iers-Gaelisch]]||lang=&quot;ga&quot;|Gaeilge||
+|----
+|gd||gla||gla||[[Schots-Gaelisch]]||lang=&quot;gd&quot;|Gàidhlig||
+|----
+|gl||glg||glg||[[Galicisch]]||lang=&quot;gl&quot;|Galego||
+|----
+|gn||grn||grn + [[ISO 639:grn|5]]||[[Guaraní (taal)|Guaraní]]||lang=&quot;gn&quot;|Avañe'ẽ||
+|----
+|gu||guj||guj||[[Gujarati]]||lang=&quot;gu&quot;|ગુજરાતી||
+|----
+|gv||glv||glv||[[Manx-Gaelisch]]||lang=&quot;gv&quot;|Ghaelg||
+|----
+|ha||hau||hau||[[Hausa (taal)|Hausa]]||lang=&quot;ha&quot; dir=&quot;rtl&quot;|‫هَوُسَ||
+|----
+|he||heb||heb||[[Hebreeuws]]||lang=&quot;he&quot; dir=&quot;rtl&quot;|‫עברית||
+|----
+|hi||hin||hin||[[Hindi]]||lang=&quot;hi&quot;|हिन्दी, हिंदी||
+|----
+|ho||hmo||hmo||[[Hiri Motu]]||lang=&quot;ho&quot;|Hiri Motu||
+|----
+|hr||scr/hrv||hrv||[[Kroatisch]]||lang=&quot;hr&quot;|Hrvatski||
+|----
+|ht||hat||hat||[[Kreyòl]]||lang=&quot;ht&quot;|Kreyòl ayisyen||
+|----
+|hu||hun||hun||[[Hongaars]]||lang=&quot;hu&quot;|Magyar||
+|----
+|hy||arm/hye||hye||[[Armeens]]||lang=&quot;hy&quot;|Հայերեն||
+|----
+|hz||her||her||[[Herero_(taal)|Herero]]||lang=&quot;hz&quot;|Otjiherero||
+|----
+|ia||ina||ina||[[Interlingua]]||lang=&quot;ia&quot;|interlingua||
+|----
+|id||ind||ind||[[Indonesisch]]||lang=&quot;id&quot;|Bahasa Indonesia||
+|----
+|ie||ile||ile||[[Interlingue]]||lang=&quot;ie&quot;|Interlingue||
+|----
+|ig||ibo||ibo||[[Igbo_(taal)|Igbo]]||lang=&quot;ig&quot;|Igbo||
+|----
+|ii||iii||iii||[[Yi_(taal)|Yi]]||lang=&quot;ii&quot;|ꆇꉙ||
+|----
+|ik||ipk||ipk + [[ISO 639:ipk|2]]||[[Inupiak]]||lang=&quot;ik&quot;|Iñupiaq, Iñupiatun||
+|----
+|io||ido||ido||[[Ido_(kunsttaal)|Ido]]||lang=&quot;io&quot;|Ido||
+|----
+|is||ice/isl||isl||[[IJslands]]||lang=&quot;is&quot;|Íslenska||
+|----
+|it||ita||ita||[[Italiaans (taal)|Italiaans]]||lang=&quot;it&quot;|Italiano||
+|----
+|iu||iku||iku + [[ISO 639:iku|2]]||[[Inuktitut]]||lang=&quot;iu&quot;|ᐃᓄᒃᑎᑐᑦ||
+|----
+|ja||jpn||jpn||[[Japans]]||{{lang|ja-Hani|日本語}}, {{lang|ja-Hira|にほんご／にっぽんご}}||
+|----
+|jv||jav||jav||[[Javaans]]||lang=&quot;jv&quot;|Basa Jawa||
+|----
+|ka||geo/kat||kat||[[Georgisch]]||lang=&quot;ka&quot;|ქართული||
+|----
+|kg||kon||kon + [[ISO 639:kon|3]]||[[Kikongo]]||lang=&quot;kg&quot;|KiKongo||
+|----
+|ki||kik||kik||[[Gikuyu_(taal)|Gikuyu]]||lang=&quot;ki&quot;|Gĩkũyũ||
+|----
+|kj||kua||kua||[[Kwanyama]]||lang=&quot;kj&quot;|Kuanyama||
+|----
+|kk||kaz||kaz||[[Kazachs]]||lang=&quot;kk&quot;|Қазақ тілі||
+|----
+|kl||kal||kal||[[Groenlands]]||lang=&quot;kl&quot;|kalaallisut, kalaallit oqaasii||
+|----
+|km||khm||khm||[[Khmer (taal)|Khmer]], Cambodjaans||lang=&quot;km&quot;|ភាសាខ្មែរ||
+|----
+|kn||kan||kan||[[Kannada]], Kanarees, Kanara||lang=&quot;kn&quot;|ಕನ್ನಡ||
+|----
+|ko||kor||kor||[[Koreaans]]||{{lang|ko-Hang|한국어}}, {{lang|ko-Hani|韓國語}}, {{lang|ko-Hang|조선말}}, {{lang|ko-Hani|朝鮮語}}&lt;!-- ideograph is used in Korea--&gt;||
+|----
+|kr||kau||kau + [[ISO 639:kau|3]]||[[Kanuri_(taal)|Kanuri]]||lang=&quot;kr&quot;|Kanuri||
+|----
+|ks||kas||kas||[[Kasjmiri]], Kasjmiers, Kasjmirs||{{lang|ks-Deva|कश्मीरी}}, {{lang|kas|‫العربية}}||
+|----
+|ku||kur||kur + [[ISO 639:kur|3]]||[[Koerdisch]]||{{lang|ku-Latn|Kurdî}}, {{lang|kur|كوردی}}||
+|----
+|kv||kom||kom + [[ISO 639:kom|2]]||[[Zurjeens]]||lang=&quot;kv&quot;|коми кыв||
+|----
+|kw||cor||cor||[[Cornisch]]||lang=&quot;kw&quot;|Cornish||
+|----
+|ky||kir||kir||[[Kirgizisch]]||lang=&quot;ky&quot;|кыргыз тили||
+|----
+|la||lat||lat||[[Latijn]]||lang=&quot;la&quot;|latine, lingua latina||
+|----
+|lb||ltz||ltz||[[Luxemburgs]]||lang=&quot;lb&quot;|Lëtzebuergesch||
+|----
+|lg||lug||lug||[[Luganda]]||lang=&quot;lg&quot;|Luganda||
+|----
+|li||lim||lim||[[Limburgs]]||lang=&quot;li&quot;|Limburgs||
+|----
+|ln||lin||lin||[[Lingala]]||lang=&quot;ln&quot;|Lingála||
+|----
+|lo||lao||lao||[[Laotiaans]]||lang=&quot;lo&quot;|ພາສາລາວ||
+|----
+|lt||lit||lit||[[Litouws]]||lang=&quot;lt&quot;|lietuvių kalba||
+|----
+|lu||lub||lub||[[Luba-Katanga]]||||
+|----
+|lv||lav||lav||[[Lets]]||lang=&quot;lv&quot;|latviešu valoda||
+|----
+|mg||mlg||mlg + [[ISO 639:mlg|10]]||[[Plateaumalagasi]]||lang=&quot;mg&quot;|Malagasy fiteny||
+|----
+|mh||mah||mah||[[Marshallees]]||lang=&quot;mh&quot;|Kajin M̧ajeļ||
+|----
+|mi||mao/mri||mri||[[Maori (taal)|Maori]]||lang=&quot;mi&quot;|Te Reo Māori||
+|----
+|mk / sl||mac/mkd||mkd||[[Macedonisch (Slavisch)|Macedonisch]]||lang=&quot;mk&quot;|македонски јазик||
+|----
+|ml||mal||mal||[[Malayalam]]||lang=&quot;ml&quot;|മലയാളം||
+|----
+|mn||mon||mon + [[ISO 639:mon|2]]||[[Mongools]]||lang=&quot;mn&quot;|Монгол||
+|----
+|mo||mol||mol||[[Moldavisch]]||lang=&quot;mo&quot;|лимба молдовеняскэ||
+|----
+|mr||mar||mar||[[Marathi (taal)|Marathi]]||lang=&quot;mr&quot;|मराठी||
+|----
+|ms||may/msa||msa + [[ISO 639:msa|13]]||[[Maleis]]||{{lang|ms|Bahasa Melayu}}, {{lang|ms|بهاس ملايو}}||
+|----
+|mt||mlt||mlt||[[Maltees]]||lang=&quot;mt&quot;|Malti||
+|----
+|my||bur/mya||mya||[[Birmaans]], Birmees||lang=&quot;my&quot;|ဗမာစာ||
+|----
+|na||nau||nau||[[Nauruaans]]||lang=&quot;na&quot;|Ekakairũ Naoero||
+|----
+|nb||nob||nob||[[Bokmål|Norwegian Bokmål]]||lang=&quot;nb&quot;|Norsk bokmål||
+|----
+|nd||nde||nde||[[Noord-Ndebele_(taal)|Noord-Ndebele]]||lang=&quot;nd&quot;|isiNdebele||
+|----
+|ne||nep||nep||[[Nepalees]], Nepali||lang=&quot;ne&quot;|नेपाली||
+|----
+|ng||ndo||ndo||[[Ndonga]]||lang=&quot;ng&quot;|Owambo||
+|----
+|nl||dut/nld||nld||[[Nederlands]]||lang=&quot;nl&quot;|Nederlands||
+|----
+|nn||nno||nno||[[Nynorsk]]||lang=&quot;nn&quot;|Norsk nynorsk||
+|----
+|no||nor||nor + [[ISO 639:nor|2]]||[[Noors]]||lang=&quot;no&quot;|Norsk||
+|----
+|nr||nbl||nbl||[[Zuid-Ndebele]]||lang=&quot;nr&quot;|Ndébélé||
+|----
+|nv||nav||nav||[[Navajo_(taal)|Navajo]]||lang=&quot;nv&quot;|Diné bizaad, Dinékʼehǰí||
+|----
+|ny||nya||nya||[[Nyanja]]||lang=&quot;ny&quot;|chiCheŵa, chinyanja||
+|----
+|oc||oci||oci + [[ISO 639:oci|5]]||[[Occitaans]]||lang=&quot;oc&quot;|Occitan||
+|----
+|oj||oji||oji + [[ISO 639:oji|7]]||[[Ojibweg]]||lang=&quot;oj&quot;|ᐊᓂᔑᓈᐯᒧᐎᓐ||
+|----
+|om||orm||orm + [[ISO 639:orm|4]]||[[Afaan_Oromo]]||lang=&quot;om&quot;|Afaan Oromoo||
+|----
+|or||ori||ori||[[Oriya]]||lang=&quot;or&quot;|ଓଡ଼ିଆ||
+|----
+|os||oss||oss||[[Ossetisch]]||lang=&quot;os&quot;|Ирон æвзаг||
+|----
+|pa||pan||pan||[[Punjabi]]||{{lang|pa|ਪੰਜਾਬੀ}}, {{lang|pa|پنجابی}}||
+|----
+|pi||pli||pli||[[Pali]]||lang=&quot;pi&quot;|पािऴ||
+|----
+|pl||pol||pol||[[Pools]]||lang=&quot;pl&quot;|język polski||
+|----
+|ps||pus||pus + [[ISO 639:pus|3]]||[[Pasjtoe]], Pasjto, Pashtoe||lang=&quot;ps&quot; dir=&quot;rtl&quot;|‫پښتو||
+|----
+|pt||por||por||[[Portugees]]||lang=&quot;pt&quot;|Português||
+|----
+|qu||que||que + [[ISO 639:que|44]]||[[Quechua (taal)|Quechua]]||lang=&quot;qu&quot;|Runa Simi, Kichwa||
+|----
+|rm||roh||roh||[[Reto-Romaans]]||lang=&quot;rm&quot;|rumantsch grischun||
+|----
+|rn||run||run||[[Kirundi]]||lang=&quot;rn&quot;|kiRundi||
+|----
+|ro||rum/ron||ron||[[Roemeens]]||lang=&quot;ro&quot;|Română||
+|----
+|ru||rus||rus||[[Russisch]]||lang=&quot;ru&quot;|русский язык||
+|----
+|rw||kin||kin||[[Kinyarwanda]]||lang=&quot;rw&quot;|Kinyarwanda||
+|----
+|sa||san||san||[[Sanskriet]]||lang=&quot;sa&quot;|संस्कृतम्||
+|----
+|sc||srd||srd + [[ISO 639:srd|4]]||[[Sardijns]]||lang=&quot;sc&quot;|sardu||
+|----
+|sd||snd||snd||[[Sindhi_(taal)|Sindhi]]||{{lang|sd-Deva|सिन्धी}}, {{lang|sd|‫سنڌي، سندھی}}||
+|----
+|se||sme||sme||[[Noord-Samisch]], Noord-Laps||lang=&quot;se&quot;|Davvisámegiella||
+|----
+|sg||sag||sag||[[Sangho]]||lang=&quot;sg&quot;|yângâ tî sängö||
+|----
+|sh||-----||hbs + [[ISO 639:hbs|3]]||[[Servokroatisch]]||lang=&quot;sh&quot;|Српскохрватски||
+|----
+|si||sin||sin||[[Singalees]]||lang=&quot;si&quot;|සිංහල||
+|----
+|sk||slo/slk||slk||[[Slowaaks]], Slovaaks||lang=&quot;sk&quot;|slovenčina||
+|----
+|sl||slv||slv||[[Sloveens]]||lang=&quot;sl&quot;|slovenščina||
+|----
+|sm||smo||smo||[[Samoaans]]||lang=&quot;sm&quot;|gagana fa'a Samoa||
+|----
+|sn||sna||sna||[[Shona_(taal)|Shona]]||lang=&quot;sn&quot;|chiShona||
+|----
+|so||som||som||[[Somalisch]]||lang=&quot;so&quot;|Soomaaliga, af Soomaali||
+|----
+|sq||alb/sqi||sqi + [[ISO 639:sqi|4]]||[[Albanees]]||lang=&quot;sq&quot;|Shqip||
+|----
+|sr||scc/srp||srp||[[Servisch]]||lang=&quot;sr&quot;|српски језик||
+|----
+|ss||ssw||ssw||[[Swazi_(taal)|Swazi]]||lang=&quot;ss&quot;|SiSwati||
+|----
+|st||sot||sot||[[Zuid-Sotho]]||lang=&quot;st&quot;|seSotho||
+|----
+|su||sun||sun||[[Soendanees]], Sundanees||lang=&quot;su&quot;|Basa Sunda||
+|----
+|sv||swe||swe||[[Zweeds]]||lang=&quot;sv&quot;|Svenska||
+|----
+|sw||swa||swa + [[ISO 639:swa|2]]||[[Swahili]]||lang=&quot;sw&quot;|Kiswahili||
+|----
+|ta||tam||tam||[[Tamil]]||lang=&quot;ta&quot;|தமிழ்||
+|----
+|te||tel||tel||[[Telugu]], Teloegoe||lang=&quot;te&quot;|తెలుగు||
+|----
+|tg||tgk||tgk||[[Tadzjieks]]||{{lang|tg-Cyrl|тоҷикӣ}}, {{lang|tg-Latn|toğikī}}, {{lang|tg|‫تاجیکی}}||
+|----
+|th||tha||tha||[[Thai (taal)|Thai]], Thais||lang=&quot;th&quot;|ไทย||
+|----
+|ti||tir||tir||[[Tigrinya_(taal)|Tigrinya]]||lang=&quot;ti&quot;|ትግርኛ ፊደል
+|----
+|tk||tuk||tuk||[[Turkmeens]], Toerkmeens||lang=&quot;tk&quot;|Türkmen, Түркмен||
+|----
+|tl||tgl||tgl||[[Tagalog]]||lang=&quot;tl&quot;|Tagalog||
+|----
+|tn||tsn||tsn||[[Tswana_(taal)|Tswana]]||lang=&quot;tn&quot;|seTswana||
+|----
+|to||ton||ton||[[Tongaans]], Tonga||lang=&quot;to&quot;|faka Tonga||
+|----
+|tr||tur||tur||[[Turks]]||lang=&quot;tr&quot;|Türkçe||
+|----
+|ts||tso||tso||[[Tsonga]]||lang=&quot;ts&quot;|xiTsonga||
+|----
+|tt||tat||tat||[[Tataars]], Tartaars||{{lang|tt-Cyrl|татарча}}, {{lang|tt-Latn|tatarça}}, {{lang|tt|‫تاتارچا}}||
+|----
+|tw||twi||twi||[[Twi]]||lang=&quot;tw&quot;|Twi||
+|----
+|ty||tah||tah||[[Tahitiaans]]||lang=&quot;ty&quot;|Reo Tahiti||
+|----
+|ug||uig||uig||[[Oeigoers]], Oejgoers||{{lang|ug-Latn|Uyƣurqə}}, {{lang|ug|‫ئۇيغۇرچ }}||
+|----
+|uk||ukr||ukr||[[Oekraïens]]||lang=&quot;uk&quot;|українська мова||
+|----
+|ur||urd||urd||[[Urdu]]||lang=&quot;ur&quot; dir=&quot;rtl&quot;|‫اردو||
+|----
+|uz||uzb||uzb + [[ISO 639:uzb|2]]||[[Oezbeeks]]||{{lang|uz-Latn|O'zbek}}, {{lang|uz-Cyrl|Ўзбек}}, {{lang|uz|أۇزبېك}}||
+|----
+|ve||ven||ven||[[Venda_(taal)|Venda]]||lang=&quot;ve&quot;|tshiVenḓa||
+|----
+|vi||vie||vie||[[Vietnamees]]||lang=&quot;vi&quot;|Tiếng Việt||
+|----
+|vo||vol||vol||[[Volapük]], Volapuk||lang=&quot;vo&quot;|Volapük||
+|----
+|wa||wln||wln||[[Waals]]||lang=&quot;wa&quot;|Walon||
+|----
+|wo||wol||wol||[[Wolof (taal)|Wolof]]||lang=&quot;wo&quot;|Wollof||
+|----
+|xh||xho||xho||[[Xhosa (taal)|Xhosa]]||lang=&quot;xh&quot;|isiXhosa||
+|----
+|yi||yid||yid + [[ISO 639:yid|2]]||[[Jiddisch]]||lang=&quot;yi&quot; dir=&quot;rtl&quot;|‫ייִדיש||
+|----
+|yo||yor||yor||[[Yoruba (taal)|Yoruba]]||lang=&quot;yo&quot;|Yorùbá||
+|----
+|za||zha||zha + [[ISO 639:zha|2]]||[[Zhuang_(taal)|Zhuang]], Tsjoeang||lang=&quot;za&quot;|Saɯ cueŋƅ, Saw cuengh||
+|----
+|zh||chi/zho||zho + [[ISO 639:zho|13]]||[[Chinese talen|Chinees]]||{{lang|zh-Hani|中文}}, {{lang|zh-Hans|汉语}}, {{lang|zh-Hant|漢語}}||
+|----
+|zu||zul||zul||[[Zoeloe (taal)|Zoeloe]]||lang=&quot;zu&quot;|isiZulu||

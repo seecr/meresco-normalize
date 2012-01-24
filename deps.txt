@@ -1,0 +1,2 @@
+python-cq2utils
+python-meresco-core (>= 3.0)
