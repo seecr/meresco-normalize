@@ -70,6 +70,10 @@ regExps = {
     "YYYY-MM": [
         compile(r'^((?P<year>\d{4})-\d{2})-\d{2}$'), #2008-01-01
         compile(r'^((?P<year>\d{4})-\d{2})$'), #2008-01
+    ],
+    "YYYY-MM-DD": [
+        compile(r'^((?P<year>\d{4})-\d{2}-\d{2})$'), #2008-01-01
     ]
 }
+regExps['YYYYMMDD'] = regExps['YYYY-MM-DD']
 regExps['YYYYMM'] = regExps['YYYY-MM']
