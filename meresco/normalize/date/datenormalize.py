@@ -28,35 +28,48 @@
 
 from re import compile
 
-class YearNormalize(object):
-    def __init__(self, yearRange):
+class DateNormalize(object):
+    def __init__(self, format="YYYY", yearRange=(1400, 2100)):
         self._yearBottom, self._yearTop = yearRange
 
-        self._yearRes = [
-            compile(r'^(\d{4})$'), #2008
-            compile(r'^(\d{4})\?$'), #2008?
-            compile(r'^(\d{4})-\d{2}-\d{2}$'), #2008-01-01
-            compile(r'^(\d{4})-\d{2}$'), #2008-01
-        ]
+        self._regExp = regExps[format]
+        if '-' in format:
+            self._postprocess = lambda result: result
+        else:
+            self._postprocess = lambda result: result.replace('-', '')
 
     def normalize(self, aString):
-        for yearRe in self._yearRes:
+        for yearRe in self._regExp:
             result = self._normalize(aString, yearRe)
             if result != None:
-                return result
+                return self._postprocess(result)
         return None
 
     def unparsable(self, aString):
         return aString if self.normalize(aString) is None else None
 
     def addRegex(self, aRegexString):
-        self._yearRes.append(compile(aRegexString))
+        assert '(?P<year>' in aRegexString
+        self._regExp.append(compile(aRegexString))
 
     def _normalize(self, aString, yearRe):
         try:
             match = yearRe.match(aString)
-            if match and self._yearBottom <= int(match.group(1)) <= self._yearTop:
+            if match and self._yearBottom <= int(match.groupdict()['year']) <= self._yearTop:
                 return match.group(1)
         except TypeError:
             return None
 
+regExps = {
+    "YYYY": [
+        compile(r'^((?P<year>\d{4}))$'), #2008
+        compile(r'^((?P<year>\d{4}))\?$'), #2008?
+        compile(r'^((?P<year>\d{4}))-\d{2}-\d{2}$'), #2008-01-01
+        compile(r'^((?P<year>\d{4}))-\d{2}$'), #2008-01
+    ],
+    "YYYY-MM": [
+        compile(r'^((?P<year>\d{4})-\d{2})-\d{2}$'), #2008-01-01
+        compile(r'^((?P<year>\d{4})-\d{2})$'), #2008-01
+    ]
+}
+regExps['YYYYMM'] = regExps['YYYY-MM']

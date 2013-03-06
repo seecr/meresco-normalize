@@ -36,7 +36,8 @@ import unittest
 from languagetest import LanguageTest
 from namenormalizetest import NameNormalizeTest
 from normalizewrappertest import NormalizeWrapperTest
-from yearnormalizetest import YearNormalizeTest
+from datenormalizeyeartest import DateNormalizeYearTest
+from datenormalizeyearmonthtest import DateNormalizeYearMonthTest
 
 if __name__ == '__main__':
     unittest.main()

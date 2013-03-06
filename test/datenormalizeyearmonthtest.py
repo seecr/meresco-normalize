@@ -3,9 +3,6 @@
 # Meresco Normalize is an open-source library containing normalization
 # components for use with Meresco
 #
-# Copyright (C) 2008-2010 Seek You Too (CQ2) http://www.cq2.nl
-# Copyright (C) 2008-2009 Technische Universiteit Delft http://www.tudelft.nl
-# Copyright (C) 2008-2009 Universiteit van Tilburg http://www.uvt.nl
 # Copyright (C) 2013 Seecr (Seek You Too B.V.) http://seecr.nl
 #
 # This file is part of "Meresco Normalize"
@@ -26,27 +23,16 @@
 #
 ## end license ##
 
-from meresco.normalize.date import YearNormalize
+from meresco.normalize.date import DateNormalize
 from normalizetestcase import NormalizeTestCase
 
-class YearNormalizeTest(NormalizeTestCase):
+class DateNormalizeYearMonthTest(NormalizeTestCase):
     def setUp(self):
-        self.normalize = YearNormalize(yearRange=(1400,2100))
+        self.normalize = DateNormalize(format="YYYY-MM", yearRange=(1400,2100))
 
     def testSimpleYear(self):
-        self.assertNormalize('2008', '2008')
+        self.assertUnparsable('2008')
         self.assertUnparsable('ABCD')
-
-    def testDitchQuestionMarkAtEnd(self):
-        self.assertNormalize('2008', '2008?')
-
-    def testSimpleDateBetweenRange(self):
-        self.assertNormalize('2008', '2008')
-        self.assertNormalize('1400', '1400')
-        self.assertNormalize('2100', '2100')
-        self.assertUnparsable('0004')
-        self.assertUnparsable('1399')
-        self.assertUnparsable('2101')
 
     def testUnparsable(self):
         self.assertUnparsable('Everything else is')
@@ -54,25 +40,26 @@ class YearNormalizeTest(NormalizeTestCase):
         self.assertUnparsable(None)
 
     def testDateYYYY_MM_DD(self):
-        self.assertNormalize('2008', '2008-01-01')
-        self.assertNormalize('2007', '2007-12-31')
-        self.assertNormalize('2006', '2006-00-00')
-        self.assertNormalize('2005', '2005-99-99')
+        self.assertNormalize('2008-01', '2008-01-01')
+        self.assertNormalize('2007-12', '2007-12-31')
+        self.assertNormalize('2006-00', '2006-00-00')
+        self.assertNormalize('2005-99', '2005-99-99')
         self.assertUnparsable('2005-1-1')
         self.assertUnparsable('2005-12-1')
         self.assertUnparsable('2005-1-12')
 
     def testDateYYYY_MM(self):
-        self.assertNormalize('2008', '2008-01')
-        self.assertNormalize('2007', '2007-12')
+        self.assertNormalize('2008-01', '2008-01')
+        self.assertNormalize('2007-12', '2007-12')
 
-    def testYearLessThanThousand(self):
-        self.normalize = YearNormalize(yearRange=(0,2100))
-        self.assertNormalize('0008', '0008')
+    def testDateYYYYMM(self):
+        self.normalize = DateNormalize(format="YYYYMM", yearRange=(1400,2100))
+        self.assertNormalize('200801', '2008-01')
+        self.assertNormalize('200712', '2007-12')
 
     def testAddRegex(self):
         self.assertUnparsable('[2008]')
-        aRegexString = r'^\[(\d{4})\]$'
+        aRegexString = r'^\[((?P<year>\d{4})-\d{2})-\d{2}\]$'
         self.normalize.addRegex(aRegexString)
 
-        self.assertNormalize('2008', '[2008]')
+        self.assertNormalize('2008-04', '[2008-04-05]')
