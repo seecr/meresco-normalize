@@ -36,6 +36,7 @@ class YearNormalize(object):
             compile(r'^(\d{4})$'), #2008
             compile(r'^(\d{4})\?$'), #2008?
             compile(r'^(\d{4})-\d{2}-\d{2}$'), #2008-01-01
+            compile(r'^(\d{4})-\d{2}$'), #2008-01
         ]
 
     def normalize(self, aString):
