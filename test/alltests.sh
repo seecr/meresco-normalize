@@ -5,7 +5,8 @@
 # components for use with Meresco
 #
 # Copyright (C) 2010 Seek You Too (CQ2) http://www.cq2.nl
-# Copyright (C) 2013 Seecr (Seek You Too B.V.) http://seecr.nl
+# Copyright (C) 2013, 2017 Seecr (Seek You Too B.V.) http://seecr.nl
+# Copyright (C) 2017 SURFmarket https://surf.nl
 #
 # This file is part of "Meresco Normalize"
 #
@@ -26,4 +27,4 @@
 ## end license ##
 
 export PYTHONPATH=.
-python2.6 _alltests.py "$@"
+python2.7 _alltests.py "$@"
