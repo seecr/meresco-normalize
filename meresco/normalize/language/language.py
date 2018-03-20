@@ -38,8 +38,14 @@ class Language(object):
             self._languages2[code2] = {'nl': dutch, 'en': english}
             self._normalizations[code2] = code3
 
-    def nameForCode(self, code3):
-        return self._languages3.get(code3, {'nl': 'Onbekend', 'en':'Unknown'})
+    def nameForCode(self, code3=None, code2=None):
+        default = {'nl': 'Onbekend', 'en':'Unknown'}
+        if ((not (code3 or code2)) or (code3 and code2)):
+            return default
+        if code3:
+            return self._languages3.get(code3, default)
+        else:
+            return self._languages2.get(code2, default)
 
     def normalize(self, aLanguage):
         language = self._normalizations.get(aLanguage, aLanguage)

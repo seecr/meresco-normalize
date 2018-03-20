@@ -45,7 +45,17 @@ class LanguageTest(SeecrTestCase):
 
     def testNameForCode(self):
         self.assertEquals({'nl': 'Nederlands', 'en':'Dutch'}, self.language.nameForCode('dut'))
+        self.assertEquals({'nl': 'Nederlands', 'en':'Dutch'}, self.language.nameForCode(code3='dut'))
+        self.assertEquals({'en': 'English', 'nl': 'Engels'}, self.language.nameForCode(code3='eng'))
+        self.assertEquals({'nl': 'Nederlands', 'en':'Dutch'}, self.language.nameForCode(code2='nl'))
+        self.assertEquals({'en': 'English', 'nl': 'Engels'}, self.language.nameForCode(code2='en'))
         self.assertEquals({'nl': 'Onbekend', 'en':'Unknown'}, self.language.nameForCode('XXX'))
+
+    def testWrongUseOfNameForCode(self):
+        self.assertEquals({'nl': 'Onbekend', 'en':'Unknown'}, self.language.nameForCode())
+        self.assertEquals({'nl': 'Onbekend', 'en':'Unknown'}, self.language.nameForCode(code2='nl', code3='dut'))
+        self.assertEquals({'nl': 'Onbekend', 'en':'Unknown'}, self.language.nameForCode(code2='nl', code3='eng'))
+        self.assertEquals({'nl': 'Onbekend', 'en':'Unknown'}, self.language.nameForCode(code2='x', code3='x'))
 
     def testNormalize(self):
         self.assertEquals('dut', self.language.normalize('dut'))
