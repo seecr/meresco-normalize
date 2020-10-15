@@ -40,7 +40,7 @@ class LanguageTest(SeecrTestCase):
     def setUp(self):
         SeecrTestCase.setUp(self)
         filename = join(self.tempdir, 'languages.txt')
-        fp = open(filename, 'w').write(TESTDATA)
+        with open(filename, 'w') as f: f.write(TESTDATA)
         self.language = Language(filename)
 
     def testNameForCode(self):

@@ -30,13 +30,14 @@ from os.path import dirname, abspath, join
 
 class Language(object):
     def __init__(self, languageFile):
-        parsed = (parts for parts in (line.strip().split('\t')
-            for line in open(languageFile)))
-        self._languages2, self._languages3, self._normalizations = dict(), dict(), dict()
-        for code3, code2, dutch, english in parsed:
-            self._languages3[code3] = {'nl': dutch, 'en': english}
-            self._languages2[code2] = {'nl': dutch, 'en': english}
-            self._normalizations[code2] = code3
+        with open(languageFile) as f:
+            parsed = (parts for parts in (line.strip().split('\t')
+                for line in f))
+            self._languages2, self._languages3, self._normalizations = dict(), dict(), dict()
+            for code3, code2, dutch, english in parsed:
+                self._languages3[code3] = {'nl': dutch, 'en': english}
+                self._languages2[code2] = {'nl': dutch, 'en': english}
+                self._normalizations[code2] = code3
 
     def nameForCode(self, code3=None, code2=None):
         default = {'nl': 'Onbekend', 'en':'Unknown'}

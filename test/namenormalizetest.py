@@ -1,7 +1,7 @@
 # This Python file uses the following encoding: utf-8
 ## begin license ##
 #
-#    Meresco Normalize is an open-source library containing normalization 
+#    Meresco Normalize is an open-source library containing normalization
 #    components for use with Meresco
 #
 #    Copyright (C) 2008-2009 Universiteit van Tilburg http://www.uvt.nl
@@ -320,24 +320,23 @@ class NameNormalizeTest(TestCase):
         #self.assertEquals(("peters", "", "j", ["j", "j"]), _breakUp("Peters, Jean-Jacques"))
 
     def testCompose(self):
-        self.assertEqual("Helsing", _helsing_v(("helsing", "a.b.", "")))
-        self.assertEqual("Helsing, v.", _helsing_v(("helsing", "a.b.", "van")))
-        self.assertEqual("Helsing, A.", _helsing_a_v(("helsing", "a.b.", "")))
-        self.assertEqual("Helsing, A. v.", _helsing_a_v(("helsing", "a.b.", "van")))
-        self.assertEqual("Helsing, A. v.d.", _helsing_a_v(("helsing", "a.b.", "van der")))
-        self.assertEqual("Helsing, A.B.", _helsing_ab_van(("helsing", "a.b.", "")))
-        self.assertEqual("Helsing, A.B. van", _helsing_ab_van(("helsing", "a.b.", "van")))
-        self.assertEqual("Helsing, A.B. van der", _helsing_ab_van(("helsing", "a.b.", "van der")))
-        self.assertEqual("IJmuiden", _helsing_v(("ijmuiden", "t.", "")))
-        self.assertEqual("Israël", _helsing_v(("israël", "t.", "")))
+        self.assertEqual("Helsing", _helsing_v("helsing", "a.b.", ""))
+        self.assertEqual("Helsing, v.", _helsing_v("helsing", "a.b.", "van"))
+        self.assertEqual("Helsing, A.", _helsing_a_v("helsing", "a.b.", ""))
+        self.assertEqual("Helsing, A. v.", _helsing_a_v("helsing", "a.b.", "van"))
+        self.assertEqual("Helsing, A. v.d.", _helsing_a_v("helsing", "a.b.", "van der"))
+        self.assertEqual("Helsing, A.B.", _helsing_ab_van("helsing", "a.b.", ""))
+        self.assertEqual("Helsing, A.B. van", _helsing_ab_van("helsing", "a.b.", "van"))
+        self.assertEqual("Helsing, A.B. van der", _helsing_ab_van("helsing", "a.b.", "van der"))
+        self.assertEqual("IJmuiden", _helsing_v("ijmuiden", "t.", ""))
+        self.assertEqual("Israël", _helsing_v("israël", "t.", ""))
 
     def testFirstLetter(self):
         self.assertEqual(int('f1', 16), ord('ñ'))
         self.assertEqual('ñ', str('ñ'))
-        self.assertEqual('\xc3\xb1', 'ñ'.encode('utf-8'))
-        self.assertEqual('\xc3\xb1', str('ñ'))
+        self.assertEqual(b'\xc3\xb1', 'ñ'.encode('utf-8'))
         self.assertEqual(['A'], list(firstLetter("Alberts, J.")))
-        self.assertEqual([str('Ñ')], list(firstLetter("ñiño, el")))
+        self.assertEqual(['Ñ'], list(firstLetter("ñiño, el")))
 
     def testNamesInOtherFormat(self):
         self.assertEqual(('groeneveld', 'e.', ''), _breakUp('E. Groeneveld'))
@@ -345,7 +344,7 @@ class NameNormalizeTest(TestCase):
         self.assertEqual(('groeneveld', 'é.û.', ''), _breakUp('É. Û. Groeneveld'))
         brokenUp = _breakUp('H. G. Ruhé')
         self.assertEqual(('ruhé', 'h.g.', ''), brokenUp)
-        result = _helsing_a_v(brokenUp)
+        result = _helsing_a_v(*brokenUp)
         self.assertEqual('Ruhé, H.', result)
 
     def testFurtherImprovementsFromTUDtestData(self):
