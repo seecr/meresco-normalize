@@ -24,7 +24,7 @@
 #    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 ## end license ##
-from namenormalize import lastnameAndFirstInitial, lastname
+from .namenormalize import lastnameAndFirstInitial, lastname
 
 class NormalizeWrapper(object):
     def unparsable(self, name):
@@ -34,7 +34,7 @@ class NormalizeWrapper(object):
     
     def normalize(self, name):
         try:
-            return self._normalize(name).next()
+            return next(self._normalize(name))
         except StopIteration:
             return None
         

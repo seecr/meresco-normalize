@@ -88,7 +88,7 @@ class _ToBeginningStrategy(object):
     def __call__(self, value):
         try:
             return ZuluTime(value)
-        except TimeError,e:
+        except TimeError as e:
             raise ValueError(e)
 
 class _ToHalfwayStrategy(object):
@@ -100,5 +100,5 @@ class _ToHalfwayStrategy(object):
             if len(value) <= len('YEAR-MM-DDT'):
                 result = result.add(hours=12)
             return result
-        except TimeError,e:
+        except TimeError as e:
             raise ValueError(e)

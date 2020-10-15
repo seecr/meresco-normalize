@@ -25,7 +25,7 @@
 #    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 ## end license ##
-from StringIO import StringIO
+from io import StringIO
 
 from unittest import TestCase
 
@@ -36,7 +36,7 @@ class NameNormalizeTest(TestCase):
     def assertLastnameAndInitials(self, expected, input=""):
         if not input:
             input = expected
-        self.assertEquals(expected, lastnameAndInitials(input).next())
+        self.assertEqual(expected, next(lastnameAndInitials(input)))
 
     def testLastnameAndInitials(self):
         self.assertLastnameAndInitials("Peters, H.")
@@ -153,10 +153,10 @@ class NameNormalizeTest(TestCase):
     def assertLastnameAndFirstInitial(self, expected, input=""):
         if not input:
             input = expected
-        self.assertEquals(expected, lastnameAndFirstInitial(input).next())
+        self.assertEqual(expected, next(lastnameAndFirstInitial(input)))
 
     def assertUnparsable(self, name):
-        self.assertEquals(name, unparsable(name).next())
+        self.assertEqual(name, next(unparsable(name)))
 
     def testNotYetNormalized(self):
         self.assertUnparsable('This$Will$@*NotBeAName')
@@ -231,7 +231,7 @@ class NameNormalizeTest(TestCase):
     def assertLastname(self, expected, input=""):
         if not input:
             input = expected
-        self.assertEquals(expected, lastname(input).next())
+        self.assertEqual(expected, next(lastname(input)))
 
     def testLastname(self):
         self.assertLastname("Peters", "Peters, H.")
@@ -268,85 +268,85 @@ class NameNormalizeTest(TestCase):
 
 
     def test_breakUp(self):
-        self.assertEquals(None, _breakUp(""))
-        self.assertEquals([str, str, str], [type(e) for e in _breakUp("Peters, H.")])
-        self.assertEquals(("peters", "h.", ""), _breakUp("Peters, H."))
-        self.assertEquals(("peters", "h.j.m.", ""), _breakUp("Peters, H.J.M."))
-        self.assertEquals(("peters", "h.j.m.", ""), _breakUp("Peters, H. J. M."))
-        self.assertEquals(("guillen scholten", "j.v.", ""), _breakUp("Guillen Scholten, J. V."))
+        self.assertEqual(None, _breakUp(""))
+        self.assertEqual([str, str, str], [type(e) for e in _breakUp("Peters, H.")])
+        self.assertEqual(("peters", "h.", ""), _breakUp("Peters, H."))
+        self.assertEqual(("peters", "h.j.m.", ""), _breakUp("Peters, H.J.M."))
+        self.assertEqual(("peters", "h.j.m.", ""), _breakUp("Peters, H. J. M."))
+        self.assertEqual(("guillen scholten", "j.v.", ""), _breakUp("Guillen Scholten, J. V."))
 
     def test_breakUpInitials(self):
-        self.assertEquals(("peters", "h.", ""), _breakUp("Peters, Hans"))
-        self.assertEquals(("peters", "h.", ""), _breakUp("Peters, H"))
-        self.assertEquals(("peters", "h.", ""), _breakUp("Peters, H. (Hans)"))
-        self.assertEquals(("peters", "h.", ""), _breakUp("Peters, H. (ed.)"))
-        self.assertEquals(("peters", "h.", ""), _breakUp("Peters. H."))
-        self.assertEquals(("peters", "h.j.m.", ""), _breakUp("Peters, H.J.M. (Hans)"))
-        self.assertEquals(("peters", "h.", ""), _breakUp("Peters, H. (Hans Jan Marie)"))
-        self.assertEquals(("peters", "h.j.m.", ""), _breakUp("Peters, HJM"))
-        self.assertEquals(("peters", "h.j.m.", ""), _breakUp("Peters, Hans Jan Marie"))
-        self.assertEquals(("peters", "j.j.", ""), _breakUp("Peters, J.-J."))
+        self.assertEqual(("peters", "h.", ""), _breakUp("Peters, Hans"))
+        self.assertEqual(("peters", "h.", ""), _breakUp("Peters, H"))
+        self.assertEqual(("peters", "h.", ""), _breakUp("Peters, H. (Hans)"))
+        self.assertEqual(("peters", "h.", ""), _breakUp("Peters, H. (ed.)"))
+        self.assertEqual(("peters", "h.", ""), _breakUp("Peters. H."))
+        self.assertEqual(("peters", "h.j.m.", ""), _breakUp("Peters, H.J.M. (Hans)"))
+        self.assertEqual(("peters", "h.", ""), _breakUp("Peters, H. (Hans Jan Marie)"))
+        self.assertEqual(("peters", "h.j.m.", ""), _breakUp("Peters, HJM"))
+        self.assertEqual(("peters", "h.j.m.", ""), _breakUp("Peters, Hans Jan Marie"))
+        self.assertEqual(("peters", "j.j.", ""), _breakUp("Peters, J.-J."))
 
-        self.assertEquals(("peters", "j.j.", ""), _breakUp("Peters, J-J."))
-        self.assertEquals(("somers","v.a.m.c.",""), _breakUp("Somers, Veerle Anne-Marie Christine"))
-        self.assertEquals(("vissers","f.h.j.a.",""), _breakUp("Vissers, Frans H.J.A."))
-        self.assertEquals(("berg","g.j.","van den"), _breakUp("Berg, G. J. van den"))
-        self.assertEquals(("berg","g.j.","van den"), _breakUp("Berg, Gerard J. van den"))
-        self.assertEquals(("berg","a.p.","van den"), _breakUp("Berg, A.P. (Arie) van den"))
-        self.assertEquals(("franses","ph.h.b.f.",""), _breakUp("Franses, Ph.H.B.F.")) #??
-        self.assertEquals(("heiden","a.f.th.","van der"), _breakUp("Heiden, A.F.Th. van der")) #??
-        self.assertEquals(("peters", "h.", ""), _breakUp("Peters, Hans"))
-        self.assertEquals(("beaumont", "w.w.", ""), _breakUp("Beaumont, W.Worby"))
-        self.assertEquals(("petri", "n.", ""), _breakUp("Petri, Nicolaus (Daventriensis)"))
+        self.assertEqual(("peters", "j.j.", ""), _breakUp("Peters, J-J."))
+        self.assertEqual(("somers","v.a.m.c.",""), _breakUp("Somers, Veerle Anne-Marie Christine"))
+        self.assertEqual(("vissers","f.h.j.a.",""), _breakUp("Vissers, Frans H.J.A."))
+        self.assertEqual(("berg","g.j.","van den"), _breakUp("Berg, G. J. van den"))
+        self.assertEqual(("berg","g.j.","van den"), _breakUp("Berg, Gerard J. van den"))
+        self.assertEqual(("berg","a.p.","van den"), _breakUp("Berg, A.P. (Arie) van den"))
+        self.assertEqual(("franses","ph.h.b.f.",""), _breakUp("Franses, Ph.H.B.F.")) #??
+        self.assertEqual(("heiden","a.f.th.","van der"), _breakUp("Heiden, A.F.Th. van der")) #??
+        self.assertEqual(("peters", "h.", ""), _breakUp("Peters, Hans"))
+        self.assertEqual(("beaumont", "w.w.", ""), _breakUp("Beaumont, W.Worby"))
+        self.assertEqual(("petri", "n.", ""), _breakUp("Petri, Nicolaus (Daventriensis)"))
 
     def test_breakUpUtf8(self):
-        self.assertEquals(("lämmel", "r.", ""), _breakUp("Lämmel, R."))
-        self.assertEquals(("ämmel", "r.", ""), _breakUp("Ämmel, R."))
-        self.assertEquals(("lämmel", "é.", ""), _breakUp("Lämmel, É."))
-        self.assertEquals(("lämmel", "é.", ""), _breakUp("Lämmel, Érik"))
-        self.assertEquals(("lämmel", "é.", ""), _breakUp("Lämmel, É. (Érik)"))
-        self.assertEquals(("núñez-queija", "r.", ""), _breakUp('Núñez-Queija, R.'))
-        self.assertEquals(("açıkel","y.s.", ""), _breakUp("Açıkel, Y. Sağ"))
+        self.assertEqual(("lämmel", "r.", ""), _breakUp("Lämmel, R."))
+        self.assertEqual(("ämmel", "r.", ""), _breakUp("Ämmel, R."))
+        self.assertEqual(("lämmel", "é.", ""), _breakUp("Lämmel, É."))
+        self.assertEqual(("lämmel", "é.", ""), _breakUp("Lämmel, Érik"))
+        self.assertEqual(("lämmel", "é.", ""), _breakUp("Lämmel, É. (Érik)"))
+        self.assertEqual(("núñez-queija", "r.", ""), _breakUp('Núñez-Queija, R.'))
+        self.assertEqual(("açıkel","y.s.", ""), _breakUp("Açıkel, Y. Sağ"))
 
     def test_breakUpPrefix(self):
-        self.assertEquals(("eind", "a.", "'t"), _breakUp("Eind, A. 't"))
-        self.assertEquals(("peters", "h.", "van"), _breakUp("Peters, H. van"))
-        self.assertEquals(("peters", "h.", "van der"), _breakUp("Peters, H. van der"))
-        self.assertEquals(("peters", "h.j.m.", "van"), _breakUp("Peters, H.J.M. van"))
-        self.assertEquals(("peters", "h.j.m.", "van"), _breakUp("Peters, H. J. M. van"))
+        self.assertEqual(("eind", "a.", "'t"), _breakUp("Eind, A. 't"))
+        self.assertEqual(("peters", "h.", "van"), _breakUp("Peters, H. van"))
+        self.assertEqual(("peters", "h.", "van der"), _breakUp("Peters, H. van der"))
+        self.assertEqual(("peters", "h.j.m.", "van"), _breakUp("Peters, H.J.M. van"))
+        self.assertEqual(("peters", "h.j.m.", "van"), _breakUp("Peters, H. J. M. van"))
 
         #self.assertEquals(("peters", "h", "v"), _breakUp("Peters, H. v.")) #?
         #naam: achter tussen voor initialen titels
         #self.assertEquals(("peters", "", "j", ["j", "j"]), _breakUp("Peters, Jean-Jacques"))
 
     def testCompose(self):
-        self.assertEquals("Helsing", _helsing_v(("helsing", "a.b.", "")))
-        self.assertEquals("Helsing, v.", _helsing_v(("helsing", "a.b.", "van")))
-        self.assertEquals("Helsing, A.", _helsing_a_v(("helsing", "a.b.", "")))
-        self.assertEquals("Helsing, A. v.", _helsing_a_v(("helsing", "a.b.", "van")))
-        self.assertEquals("Helsing, A. v.d.", _helsing_a_v(("helsing", "a.b.", "van der")))
-        self.assertEquals("Helsing, A.B.", _helsing_ab_van(("helsing", "a.b.", "")))
-        self.assertEquals("Helsing, A.B. van", _helsing_ab_van(("helsing", "a.b.", "van")))
-        self.assertEquals("Helsing, A.B. van der", _helsing_ab_van(("helsing", "a.b.", "van der")))
-        self.assertEquals("IJmuiden", _helsing_v(("ijmuiden", "t.", "")))
-        self.assertEquals("Israël", _helsing_v(("israël", "t.", "")))
+        self.assertEqual("Helsing", _helsing_v(("helsing", "a.b.", "")))
+        self.assertEqual("Helsing, v.", _helsing_v(("helsing", "a.b.", "van")))
+        self.assertEqual("Helsing, A.", _helsing_a_v(("helsing", "a.b.", "")))
+        self.assertEqual("Helsing, A. v.", _helsing_a_v(("helsing", "a.b.", "van")))
+        self.assertEqual("Helsing, A. v.d.", _helsing_a_v(("helsing", "a.b.", "van der")))
+        self.assertEqual("Helsing, A.B.", _helsing_ab_van(("helsing", "a.b.", "")))
+        self.assertEqual("Helsing, A.B. van", _helsing_ab_van(("helsing", "a.b.", "van")))
+        self.assertEqual("Helsing, A.B. van der", _helsing_ab_van(("helsing", "a.b.", "van der")))
+        self.assertEqual("IJmuiden", _helsing_v(("ijmuiden", "t.", "")))
+        self.assertEqual("Israël", _helsing_v(("israël", "t.", "")))
 
     def testFirstLetter(self):
-        self.assertEquals(int('f1', 16), ord(u'ñ'))
-        self.assertEquals(u'ñ', unicode('ñ'))
-        self.assertEquals('\xc3\xb1', u'ñ'.encode('utf-8'))
-        self.assertEquals('\xc3\xb1', str(u'ñ'))
-        self.assertEquals(['A'], list(firstLetter("Alberts, J.")))
-        self.assertEquals([str('Ñ')], list(firstLetter("ñiño, el")))
+        self.assertEqual(int('f1', 16), ord('ñ'))
+        self.assertEqual('ñ', str('ñ'))
+        self.assertEqual('\xc3\xb1', 'ñ'.encode('utf-8'))
+        self.assertEqual('\xc3\xb1', str('ñ'))
+        self.assertEqual(['A'], list(firstLetter("Alberts, J.")))
+        self.assertEqual([str('Ñ')], list(firstLetter("ñiño, el")))
 
     def testNamesInOtherFormat(self):
-        self.assertEquals(('groeneveld', 'e.', ''), _breakUp('E. Groeneveld'))
-        self.assertEquals(('groeneveld', 'e.g.', ''), _breakUp('E. G. Groeneveld'))
-        self.assertEquals(('groeneveld', 'é.û.', ''), _breakUp('É. Û. Groeneveld'))
+        self.assertEqual(('groeneveld', 'e.', ''), _breakUp('E. Groeneveld'))
+        self.assertEqual(('groeneveld', 'e.g.', ''), _breakUp('E. G. Groeneveld'))
+        self.assertEqual(('groeneveld', 'é.û.', ''), _breakUp('É. Û. Groeneveld'))
         brokenUp = _breakUp('H. G. Ruhé')
-        self.assertEquals(('ruhé', 'h.g.', ''), brokenUp)
+        self.assertEqual(('ruhé', 'h.g.', ''), brokenUp)
         result = _helsing_a_v(brokenUp)
-        self.assertEquals('Ruhé, H.', result)
+        self.assertEqual('Ruhé, H.', result)
 
     def testFurtherImprovementsFromTUDtestData(self):
         self.assertLastnameAndInitials("Ahan", "ahan")

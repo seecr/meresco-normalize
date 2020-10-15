@@ -27,4 +27,4 @@
 ## end license ##
 
 export PYTHONPATH=.
-python2.7 _alltests.py "$@"
+python3 _alltests.py "$@"

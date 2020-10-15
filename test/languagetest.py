@@ -44,43 +44,43 @@ class LanguageTest(SeecrTestCase):
         self.language = Language(filename)
 
     def testNameForCode(self):
-        self.assertEquals({'nl': 'Nederlands', 'en':'Dutch'}, self.language.nameForCode('dut'))
-        self.assertEquals({'nl': 'Nederlands', 'en':'Dutch'}, self.language.nameForCode(code3='dut'))
-        self.assertEquals({'en': 'English', 'nl': 'Engels'}, self.language.nameForCode(code3='eng'))
-        self.assertEquals({'nl': 'Nederlands', 'en':'Dutch'}, self.language.nameForCode(code2='nl'))
-        self.assertEquals({'en': 'English', 'nl': 'Engels'}, self.language.nameForCode(code2='en'))
-        self.assertEquals({'nl': 'Onbekend', 'en':'Unknown'}, self.language.nameForCode('XXX'))
+        self.assertEqual({'nl': 'Nederlands', 'en':'Dutch'}, self.language.nameForCode('dut'))
+        self.assertEqual({'nl': 'Nederlands', 'en':'Dutch'}, self.language.nameForCode(code3='dut'))
+        self.assertEqual({'en': 'English', 'nl': 'Engels'}, self.language.nameForCode(code3='eng'))
+        self.assertEqual({'nl': 'Nederlands', 'en':'Dutch'}, self.language.nameForCode(code2='nl'))
+        self.assertEqual({'en': 'English', 'nl': 'Engels'}, self.language.nameForCode(code2='en'))
+        self.assertEqual({'nl': 'Onbekend', 'en':'Unknown'}, self.language.nameForCode('XXX'))
 
     def testWrongUseOfNameForCode(self):
-        self.assertEquals({'nl': 'Onbekend', 'en':'Unknown'}, self.language.nameForCode())
-        self.assertEquals({'nl': 'Onbekend', 'en':'Unknown'}, self.language.nameForCode(code2='nl', code3='dut'))
-        self.assertEquals({'nl': 'Onbekend', 'en':'Unknown'}, self.language.nameForCode(code2='nl', code3='eng'))
-        self.assertEquals({'nl': 'Onbekend', 'en':'Unknown'}, self.language.nameForCode(code2='x', code3='x'))
+        self.assertEqual({'nl': 'Onbekend', 'en':'Unknown'}, self.language.nameForCode())
+        self.assertEqual({'nl': 'Onbekend', 'en':'Unknown'}, self.language.nameForCode(code2='nl', code3='dut'))
+        self.assertEqual({'nl': 'Onbekend', 'en':'Unknown'}, self.language.nameForCode(code2='nl', code3='eng'))
+        self.assertEqual({'nl': 'Onbekend', 'en':'Unknown'}, self.language.nameForCode(code2='x', code3='x'))
 
     def testNormalize(self):
-        self.assertEquals('dut', self.language.normalize('dut'))
-        self.assertEquals('dut', self.language.normalize('nl'))
-        self.assertEquals(None, self.language.normalize('XXX'))
+        self.assertEqual('dut', self.language.normalize('dut'))
+        self.assertEqual('dut', self.language.normalize('nl'))
+        self.assertEqual(None, self.language.normalize('XXX'))
 
         self.language.addNormalizationRule('ned', 'dut')
-        self.assertEquals('dut', self.language.normalize('ned'))
+        self.assertEqual('dut', self.language.normalize('ned'))
 
     def testUnparsable(self):
-        self.assertEquals('XXX', self.language.unparsable('XXX'))
-        self.assertEquals(None, self.language.unparsable('dut'))
+        self.assertEqual('XXX', self.language.unparsable('XXX'))
+        self.assertEqual(None, self.language.unparsable('dut'))
 
         self.language.addNormalizationRule('nld', 'dut')
-        self.assertEquals(None, self.language.unparsable('nld'))
+        self.assertEqual(None, self.language.unparsable('nld'))
 
     def testAsDict(self):
         l = Language.default()
         result = l.asDict(language='nl', codelength='2')
-        self.assertEquals('Nederlands', result['nl'])
+        self.assertEqual('Nederlands', result['nl'])
         result = l.asDict(language='nl', codelength='3')
-        self.assertEquals('Nederlands', result['dut'])
+        self.assertEqual('Nederlands', result['dut'])
         result = l.asDict(language='en', codelength='2')
-        self.assertEquals('Dutch', result['nl'])
+        self.assertEqual('Dutch', result['nl'])
         result = l.asDict(language='en', codelength='3')
-        self.assertEquals('Dutch', result['dut'])
+        self.assertEqual('Dutch', result['dut'])
         result = l.asDict(language='en', codelength='3')
-        self.assertEquals('Afrikaans', result['afr'])
+        self.assertEqual('Afrikaans', result['afr'])

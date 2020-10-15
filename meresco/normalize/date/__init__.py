@@ -25,5 +25,5 @@
 #
 ## end license ##
 
-from datenormalize import DateNormalize
+from .datenormalize import DateNormalize
 from .datefill import DateFill

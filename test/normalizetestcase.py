@@ -28,9 +28,9 @@ from unittest import TestCase
 
 class NormalizeTestCase(TestCase):
     def assertNormalize(self, expected, aString):
-        self.assertEquals(expected, self.normalize.normalize(aString))
-        self.assertEquals(None, self.normalize.unparsable(aString))
+        self.assertEqual(expected, self.normalize.normalize(aString))
+        self.assertEqual(None, self.normalize.unparsable(aString))
 
     def assertUnparsable(self, aString):
-        self.assertEquals(aString, self.normalize.unparsable(aString))
-        self.assertEquals(None, self.normalize.normalize(aString))
+        self.assertEqual(aString, self.normalize.unparsable(aString))
+        self.assertEqual(None, self.normalize.normalize(aString))

@@ -1,6 +1,6 @@
 ## begin license ##
 #
-#    Meresco Normalize is an open-source library containing normalization 
+#    Meresco Normalize is an open-source library containing normalization
 #    components for use with Meresco
 #
 #    Copyright (C) 2008-2009 Universiteit van Tilburg http://www.uvt.nl
@@ -97,8 +97,8 @@ compiledExpressions = [(compile(expression, UNICODE),f) for expression,f in expr
 compiledSpecificExpressions = [compile(expression, flags|UNICODE) for flags, expression in specificExpressions]
 
 def _breakUp(name):
-    if type(name) != unicode:
-        name = unicode(name)
+    if type(name) != str:
+        name = str(name)
     for expression in compiledSpecificExpressions:
         m = expression.match(name)
         if m:
@@ -136,16 +136,16 @@ def _capitalizeSubstite(match):
     return firstLetter.upper() + tail
 
 def _capitalize(aString):
-    return str(_capitalizeRegexp.sub(_capitalizeSubstite, unicode(aString)))
+    return str(_capitalizeRegexp.sub(_capitalizeSubstite, str(aString)))
 
-def _helsing_v((lastname, initials, prefix)):
+def _helsing_v(lastname, initials, prefix):
     prefix = ''.join([aChar == "'t" and aChar or aChar+"." for aChar in getInitials(prefix)])
     result = _capitalize(lastname)
     if prefix:
         return result + ", " + prefix
     return result
 
-def _helsing_a_v((lastname, initials, prefix)):
+def _helsing_a_v(lastname, initials, prefix):
     prefix = ''.join([aChar == "'t" and aChar or aChar+"." for aChar in getInitials(prefix)])
     initials = initials.split('.', 1)[0] + '.'
     result = "%s, %s" % (_capitalize(lastname), _capitalize(initials))
@@ -153,7 +153,7 @@ def _helsing_a_v((lastname, initials, prefix)):
         return result + " " + prefix
     return result
 
-def _helsing_ab_van((lastname, initials, prefix)):
+def _helsing_ab_van(lastname, initials, prefix):
     if initials:
         result = "%s, %s" % (_capitalize(lastname), _capitalize(initials))
     else:
@@ -165,23 +165,23 @@ def _helsing_ab_van((lastname, initials, prefix)):
 def lastname(unparsedName):
     parts = _breakUp(unparsedName)
     if parts:
-        yield _helsing_v(parts)
+        yield _helsing_v(*parts)
 
 def lastnameAndFirstInitial(unparsedName):
     parts = _breakUp(unparsedName)
     if parts:
-        yield _helsing_a_v(parts)
+        yield _helsing_a_v(*parts)
 
 def lastnameAndInitials(unparsedName):
     parts = _breakUp(unparsedName)
     if parts:
-        yield _helsing_ab_van(parts)
+        yield _helsing_ab_van(*parts)
 
 def firstLetter(unparsedName):
     parts = _breakUp(unparsedName)
     if parts:
         lastname, initials, prefix = parts
-        lastname = unicode(lastname)
+        lastname = str(lastname)
         yield str(lastname[:1].upper())
 
 def unparsable(unparsedName):

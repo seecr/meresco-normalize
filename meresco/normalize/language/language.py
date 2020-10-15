@@ -61,7 +61,7 @@ class Language(object):
             return aLanguage
 
     def asDict(self, language, codelength):
-        return {code:label[language] for code,label in getattr(self, '_languages{0}'.format(codelength)).iteritems()}
+        return {code:label[language] for code,label in getattr(self, '_languages{0}'.format(codelength)).items()}
 
     @classmethod
     def default(cls):

@@ -74,7 +74,7 @@ if __name__ == '__main__':
         for languageCode in sorted(results):
             languageCode2, nameDictionary = results[languageCode]
             if len(nameDictionary) != 2:
-                print languageCode, languageCode2, nameDictionary
+                print(languageCode, languageCode2, nameDictionary)
             fp.write("%s\t%s\t%s\t%s\n" % (languageCode, languageCode2, nameDictionary['nl'], nameDictionary['en']))
     finally:
         fp.close()
