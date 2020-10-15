@@ -3,7 +3,7 @@
 # Meresco Normalize is an open-source library containing normalization
 # components for use with Meresco
 #
-# Copyright (C) 2018 Seecr (Seek You Too B.V.) https://seecr.nl
+# Copyright (C) 2018, 2020 Seecr (Seek You Too B.V.) https://seecr.nl
 # Copyright (C) 2018 Stichting Kennisnet https://www.kennisnet.nl
 #
 # This file is part of "Meresco Normalize"

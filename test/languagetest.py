@@ -6,7 +6,7 @@
 # Copyright (C) 2008-2010 Seek You Too (CQ2) http://www.cq2.nl
 # Copyright (C) 2008-2009 Technische Universiteit Delft http://www.tudelft.nl
 # Copyright (C) 2017 SURFmarket https://surf.nl
-# Copyright (C) 2017 Seecr (Seek You Too B.V.) http://seecr.nl
+# Copyright (C) 2017, 2020 Seecr (Seek You Too B.V.) https://seecr.nl
 #
 # This file is part of "Meresco Normalize"
 #
