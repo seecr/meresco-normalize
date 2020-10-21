@@ -27,4 +27,5 @@
 ## end license ##
 
 export PYTHONPATH=.
+export PYTHONWARNINGS=default
 python3 _alltests.py "$@"
