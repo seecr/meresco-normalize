@@ -1,37 +1,51 @@
 ## begin license ##
 #
-#    Meresco Normalize is an open-source library containing normalization 
-#    components for use with Meresco
-#    Copyright (C) 2010 Seek You Too (CQ2) http://www.cq2.nl
+# Meresco Normalize is an open-source library containing normalization
+# components for use with Meresco
 #
-#    This file is part of Meresco Normalize.
+# Copyright (C) 2010 Seek You Too (CQ2) http://www.cq2.nl
+# Copyright (C) 2020-2021 Data Archiving and Network Services https://dans.knaw.nl
+# Copyright (C) 2020-2021 SURF https://www.surf.nl
+# Copyright (C) 2020-2021 Seecr (Seek You Too B.V.) https://seecr.nl
+# Copyright (C) 2020-2021 Stichting Kennisnet https://www.kennisnet.nl
+# Copyright (C) 2020-2021 The Netherlands Institute for Sound and Vision https://beeldengeluid.nl
 #
-#    Meresco Normalize is free software; you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation; either version 2 of the License, or
-#    (at your option) any later version.
+# This file is part of "Meresco Normalize"
 #
-#    Meresco Normalize is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
+# "Meresco Normalize" is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
 #
-#    You should have received a copy of the GNU General Public License
-#    along with Meresco Normalize; if not, write to the Free Software
-#    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+# "Meresco Normalize" is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with "Meresco Normalize"; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 ## end license ##
-set -e
 
+source /usr/share/seecr-tools/functions.d/test
+
+set -e
+mydir=$(cd $(dirname $0); pwd)
 rm -rf tmp build
 
-python setup.py install --root tmp
+definePythonVars
+$PYTHON setup.py install --root tmp
+removeDoNotDistribute tmp
+cp -r test tmp/test
+find tmp -type f -exec sed -e "
+    s,^usrSharePath.*$,usrSharePath='$mydir/tmp/usr/share/meresco-normalize',;
+    " -i {} \;
 
-export PYTHONPATH=`pwd`/tmp/usr/lib/python2.5/site-packages
-
-(
-cd test
-./alltests.sh
-)
+if [ -z "$@" ]; then
+    runtests "alltests.sh"
+else
+    runtests "$@"
+fi
 
 rm -rf tmp build
