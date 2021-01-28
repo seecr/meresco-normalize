@@ -35,7 +35,7 @@ mydir=$(cd $(dirname $0); pwd)
 rm -rf tmp build
 
 definePythonVars
-$PYTHON setup.py install --root tmp
+${PYTHON} setup.py install --root tmp
 removeDoNotDistribute tmp
 cp -r test tmp/test
 find tmp -type f -exec sed -e "
