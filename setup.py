@@ -33,6 +33,8 @@ from distutils.core import setup
 from os import walk
 from os.path import join
 
+version = '$Version: 0$'[9:-1].strip()
+
 data_files = []
 for path, dirs, files in walk('usr-share'):
     data_files.append((path.replace('usr-share', '/usr/share/meresco-normalize', 1), [join(path, f) for f in files]))
@@ -48,7 +50,7 @@ setup(
         'meresco',                          #DO_NOT_DISTRIBUTE
     ] + packages,
     data_files=data_files,
-    version='%VERSION%',
+    version=version,
     url='http://www.meresco.org',
     author='Seek You Too',
     author_email='info@cq2.nl',
